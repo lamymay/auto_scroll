@@ -6,11 +6,13 @@ Windows implementation of the ThinkPad Auto Scroll behavior: when the active win
 
 The Windows app now starts as a notification-area tray utility using native Win32 APIs, with no external GUI framework or runtime dependency. On first launch it shows a short usage guide and remembers completion under `%APPDATA%\\ThinkPadAutoScroll\\settings.ini`. The tray menu provides pause/resume, show guide, settings entry, and exit. The actual edge-drag detection and window panning behavior, plus a real settings window, are still pending.
 
-Build on Windows with:
+Build a Windows x64 release from PowerShell with:
 
 ```powershell
-cargo build --release
+.\scripts\build-windows.ps1
 ```
+
+For Windows ARM64, run `.\scripts\build-windows.ps1 -TargetCpu arm64`. The script writes the executable to `dist`.
 
 This repository is Windows-only for now. macOS will be a separate implementation.
 
