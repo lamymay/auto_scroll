@@ -1,0 +1,30 @@
+# Rust build output
+/target/
+
+# Rust analyzer / IDE state
+.rustc_info.json
+.idea/
+.vscode/
+
+# Windows build and installer artifacts
+*.exe
+*.msi
+*.msix
+*.appx
+*.pdb
+*.ilk
+*.obj
+*.res
+*.manifest
+Thumbs.db
+Desktop.ini
+
+# macOS metadata
+.DS_Store
+._*
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+*.log
